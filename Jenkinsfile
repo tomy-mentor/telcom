@@ -7,7 +7,7 @@ pipeline {
         stage('first stage:copy files') {
             steps {
                 echo "Copy files from github"
-                sh 'ls'
+                
 		sh 'pwd'
 		sh """
  		rm -rf telcom-pipeline-new
