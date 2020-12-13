@@ -9,22 +9,24 @@ pipeline {
                 echo "Copy files from github"
                 sh 'ls'
 		sh 'pwd'
-		
-		sh 'mkdir telcom-pipeline-new'
-		sh 'cd telcom-pipeline-new'
-		sh 'wget https://raw.githubusercontent.com/tomy-mentor/telcom/main/smote_rf_model_2'
-                sh 'wget https://raw.githubusercontent.com/tomy-mentor/telcom/main/smote_rf_model'
-                sh 'wget https://raw.githubusercontent.com/tomy-mentor/telcom/main/model_features.pkl'
-		sh 'wget https://raw.githubusercontent.com/tomy-mentor/telcom/main/df_deploy.pkl'
-                sh 'wget https://raw.githubusercontent.com/tomy-mentor/telcom/main/deployment.ipynb'
-		sh 'wget https://raw.githubusercontent.com/tomy-mentor/telcom/main/churn2.ipynb'
-		sh 'wget https://raw.githubusercontent.com/tomy-mentor/telcom/main/app.py'
-		sh 'wget https://raw.githubusercontent.com/tomy-mentor/telcom/main/WA_Fn-UseC_-Telco-Customer-Churn.csv'
-		sh 'wget https://raw.githubusercontent.com/tomy-mentor/telcom/main/.ipynb_checkpoints/app-checkpoint.py'		
-		sh 'wget https://raw.githubusercontent.com/tomy-mentor/telcom/main/.ipynb_checkpoints/churn2-checkpoint.ipynb'
-		sh 'wget https://raw.githubusercontent.com/tomy-mentor/telcom/main/.ipynb_checkpoints/deployment-checkpoint.ipynb'
+		sh """
+ 		rm -rf telcom-pipeline-new
+		mkdir telcom-pipeline-new
+		cd telcom-pipeline-new
+		wget https://raw.githubusercontent.com/tomy-mentor/telcom/main/smote_rf_model_2
+                wget https://raw.githubusercontent.com/tomy-mentor/telcom/main/smote_rf_model
+                wget https://raw.githubusercontent.com/tomy-mentor/telcom/main/model_features.pkl
+		wget https://raw.githubusercontent.com/tomy-mentor/telcom/main/df_deploy.pkl
+                wget https://raw.githubusercontent.com/tomy-mentor/telcom/main/deployment.ipynb
+		wget https://raw.githubusercontent.com/tomy-mentor/telcom/main/churn2.ipynb
+		wget https://raw.githubusercontent.com/tomy-mentor/telcom/main/app.py
+		wget https://raw.githubusercontent.com/tomy-mentor/telcom/main/WA_Fn-UseC_-Telco-Customer-Churn.csv
+		wget https://raw.githubusercontent.com/tomy-mentor/telcom/main/.ipynb_checkpoints/app-checkpoint.py		
+		wget https://raw.githubusercontent.com/tomy-mentor/telcom/main/.ipynb_checkpoints/churn2-checkpoint.ipynb
+		wget https://raw.githubusercontent.com/tomy-mentor/telcom/main/.ipynb_checkpoints/deployment-checkpoint.ipynb
 
-		sh 'ls'
+		ls
+		"""
             }
        }
 	 stage('build') {
