@@ -16,7 +16,10 @@ pipeline {
 		sh 'wget https://raw.githubusercontent.com/tomy-mentor/telcom/main/churn2.ipynb'
 		sh 'wget https://raw.githubusercontent.com/tomy-mentor/telcom/main/app.py'
 		sh 'wget https://raw.githubusercontent.com/tomy-mentor/telcom/main/WA_Fn-UseC_-Telco-Customer-Churn.csv'
-		sh 'wget https://raw.githubusercontent.com/tomy-mentor/telcom/main/.ipynb_checkpoints'
+		sh 'wget https://raw.githubusercontent.com/tomy-mentor/telcom/main/.ipynb_checkpoints/app-checkpoint.py'		
+		sh 'wget https://raw.githubusercontent.com/tomy-mentor/telcom/main/.ipynb_checkpoints/churn2-checkpoint.ipynb'
+		sh 'wget https://raw.githubusercontent.com/tomy-mentor/telcom/main/.ipynb_checkpoints/deployment-checkpoint.ipynb'
+
 		sh 'ls'
             }
        }
