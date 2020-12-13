@@ -9,7 +9,7 @@ pipeline {
                 echo "Copy files from github"
                 sh 'ls'
 		sh 'pwd'
-		sh 'rm -rf telcom-pipeline'
+		sh 'sudo rm -rf telcom-pipeline'
 		sh 'mkdir telcom-pipeline'
 		sh 'wget https://raw.githubusercontent.com/tomy-mentor/telcom/main/smote_rf_model_2'
                 sh 'wget https://raw.githubusercontent.com/tomy-mentor/telcom/main/smote_rf_model'
