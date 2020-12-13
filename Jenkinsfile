@@ -10,16 +10,13 @@ pipeline {
                 sh 'wget https://raw.githubusercontent.com/tomy-mentor/telcom/main/smote_rf_model_2'
                 sh 'ls'
             }
-     stage('build') {
+       }
+	 stage('build') {
             steps {
                 echo "Clarusway_Way to Reinvent Yourself"
                 sh 'echo second step'
                 sh 'echo another step'
-                sh '''
-                echo 'Multiline'
-                echo 'Example'
-                '''
-                echo 'not using shell'
+            
             }
 
         }
