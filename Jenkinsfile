@@ -7,8 +7,17 @@ pipeline {
         stage('first stage:copy files') {
             steps {
                 echo "Copy files from github"
-                sh 'wget https://raw.githubusercontent.com/tomy-mentor/telcom/main/smote_rf_model_2'
                 sh 'ls'
+		sh 'wget https://raw.githubusercontent.com/tomy-mentor/telcom/main/smote_rf_model_2'
+                sh 'wget https://raw.githubusercontent.com/tomy-mentor/telcom/main/smote_rf_model'
+                sh 'wget https://raw.githubusercontent.com/tomy-mentor/telcom/main/model_features.pkl'
+		sh 'wget https://raw.githubusercontent.com/tomy-mentor/telcom/main/df_deploy.pkl'
+                sh 'wget https://raw.githubusercontent.com/tomy-mentor/telcom/main/deployment.ipynb'
+		sh 'wget https://raw.githubusercontent.com/tomy-mentor/telcom/main/churn2.ipynb'
+		sh 'wget https://raw.githubusercontent.com/tomy-mentor/telcom/main/app.py'
+		sh 'wget https://raw.githubusercontent.com/tomy-mentor/telcom/main/WA_Fn-UseC_-Telco-Customer-Churn.csv'
+		sh 'wget https://raw.githubusercontent.com/tomy-mentor/telcom/main/.ipynb_checkpoints'
+		sh 'ls'
             }
        }
 	 stage('build') {
