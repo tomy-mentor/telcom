@@ -8,6 +8,7 @@ pipeline {
             steps {
                 echo "Copy files from github"
                 sh 'ls'
+		sh 'pwd'
 		sh 'wget https://raw.githubusercontent.com/tomy-mentor/telcom/main/smote_rf_model_2'
                 sh 'wget https://raw.githubusercontent.com/tomy-mentor/telcom/main/smote_rf_model'
                 sh 'wget https://raw.githubusercontent.com/tomy-mentor/telcom/main/model_features.pkl'
