@@ -31,7 +31,7 @@ pipeline {
        }
 	 stage('build') {
             steps {
-                echo "Clarusway_Way to Reinvent Yourself"
+                echo "Tomy is training"
                 sh 'echo second step'
                 sh 'echo another step'
             
