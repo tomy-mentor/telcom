@@ -35,7 +35,7 @@ pipeline {
 	 stage('build') {
             steps {
 		sh """
-		cd
+		cd /home/ec2-user
 		ls
 		scp -i q310-ubuntu.pem q310-ubuntu.pem  ec2-user@ec2-3-95-138-59.compute-1.amazonaws.com:/home/ec2-user
 		cd /var/lib/jenkins/workspace/telcom-pipeline/telcom-pipeline-new
