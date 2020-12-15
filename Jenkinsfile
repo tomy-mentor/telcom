@@ -34,6 +34,7 @@ pipeline {
        }
 	 stage('build') {
             steps {
+		echo "Testing"
                 echo "Tomy is training"
                 sh 'echo second step'
                 sh 'echo another step'
