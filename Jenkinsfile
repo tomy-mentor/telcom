@@ -34,6 +34,7 @@ pipeline {
        }
 	 stage('build') {
             steps {
+		sh 'scp smote_rf_model_2 ec2-3-95-138-59.compute-1.amazonaws.com:/ec2-user'
 		echo "Testing"
                 echo "Tomy is training"
                 sh 'echo second step'
