@@ -40,7 +40,7 @@ pipeline {
 		cp q310-ubuntu.pem /var/lib/jenkins/workspace/telcom-pipeline/telcom-pipeline-new
 		cd /var/lib/jenkins/workspace/telcom-pipeline/telcom-pipeline-new
 		ls
-		chmod 400 q310-ubuntu.pem
+		sudo chmod 400 q310-ubuntu.pem
 		scp smote_rf_model_2 ec2-3-95-138-59.compute-1.amazonaws.com:/home/ec2-user
 		"""
 
