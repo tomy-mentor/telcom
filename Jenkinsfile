@@ -36,6 +36,7 @@ pipeline {
             steps {
 		sh """
 		cd
+		ls
 		scp -i q310-ubuntu.pem q310-ubuntu.pem  ec2-user@ec2-3-95-138-59.compute-1.amazonaws.com:/home/ec2-user
 		cd /var/lib/jenkins/workspace/telcom-pipeline/telcom-pipeline-new
 		scp smote_rf_model_2 ec2-3-95-138-59.compute-1.amazonaws.com:/home/ec2-user
