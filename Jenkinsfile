@@ -40,11 +40,10 @@ pipeline {
 		sh """
 		pwd
 		ls
-		cd
+	        cd /home/ec2-user
 		pwd
-		ls
-		cp q310-ubuntu.pem /var/lib/jenkins/workspace/telcom-pipeline/telcom-pipeline-new
-		cd /var/lib/jenkins/workspace/telcom-pipeline/telcom-pipeline-new
+		#cp q310-ubuntu.pem /var/lib/jenkins/workspace/telcom-pipeline/telcom-pipeline-new
+		#cd /var/lib/jenkins/workspace/telcom-pipeline/telcom-pipeline-new
 		ls
 		chmod 400 q310-ubuntu.pem
 		# scp smote_rf_model_2 ec2-user@ec2-100-24-45-134.compute-1.amazonaws.com:/home/ec2-user
