@@ -10,7 +10,7 @@ pipeline {
                 
 		sh 'pwd'
 		sh 'cd'
-	
+		sh 'pwd'	
 		sh """
 		pwd
  		rm -rf telcom-pipeline-new
