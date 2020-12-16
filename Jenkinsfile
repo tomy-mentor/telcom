@@ -10,8 +10,9 @@ pipeline {
                 
 		sh 'pwd'
 		sh 'cd'
-		Sh 'pwd'
+	
 		sh """
+		pwd
  		rm -rf telcom-pipeline-new
 		mkdir telcom-pipeline-new
 		cd telcom-pipeline-new
