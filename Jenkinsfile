@@ -9,6 +9,8 @@ pipeline {
                 echo "Copy files from github"
                 
 		sh 'pwd'
+		sh 'cd'
+		Sh 'pwd'
 		sh """
  		rm -rf telcom-pipeline-new
 		mkdir telcom-pipeline-new
